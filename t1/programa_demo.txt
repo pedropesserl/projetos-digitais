@@ -1,0 +1,29 @@
+00000000	sem operação
+b001000a	r1 <- 0 + a
+e1200004	se r1 == r2, pula 4 endereços		:: linhas 3 a 6 implementam um loop
+b2020001	r2 <- r2 + 1
+c2000000	mostra r2							:: 1, 2, 3, 4, 5, 6, 7, 8, 9, a
+d000fffc	pula -4 endereços (para a linha 3)
+30220000	r2 <- r0 & r2						:: r2 <- 00000000 & 0000000a
+c2000000	mostra r2							:: 00000000
+b0020005	r2 <- r2 + 5						:: r2 <- 0 + 5
+c2000000	mostra r2							:: 00000005
+11230000	r3 <- r1 + r2						:: r3 <- a + 5
+c3000000	mostra r3							:: 0000000f
+23140000	r4 <- r3 - r1						:: r4 <- f - a
+c4000000	mostra r4							:: 00000005
+64040000	r4 <- !r4							:: r4 <- ~00000005
+c4000000	mostra r4							:: fffffffa
+44250000	r5 <- r4 | r2						:: r5 <- fffffffa | 00000005
+c5000000	mostra r5							:: ffffffff
+55060000	r6 <- r5 ^ r0						:: r6 <- ffffffff ^ 00000000
+c6000000	mostra r6							:: ffffffff
+76260000	r6 <- r6 << r2						:: r6 <- ffffffff << 5
+c6000000	mostra r6							:: ffffffe0
+86260000	r6 <- r6 >> r2						:: r6 <- ffffffe0 >> 5
+c6000000	mostra r6							:: 07ffffff
+9505ffff	r5 <- r5 | ffff						:: r5 <- ffffffff | 0000ffff
+c5000000	mostra r5							:: ffffffff
+a505ffff	r5 <- r5 ^ ffff						:: r5 <- ffffffff ^ 0000ffff
+c5000000	mostra r5							:: ffff0000
+f0000000	para a simulação
