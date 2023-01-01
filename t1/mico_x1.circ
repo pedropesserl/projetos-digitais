@@ -411,7 +411,7 @@ e2 66 86 6 1 8 20 10
       <a name="label" val="Memoria_de_controle"/>
       <a name="labelvisible" val="true"/>
     </comp>
-    <comp loc="(1190,390)" name="ULA"/>
+    <comp loc="(1190,390)" name="Unidade_Logico_Aritmetica"/>
     <comp loc="(270,350)" name="CarryLookAhead_adder_32b"/>
     <comp loc="(980,390)" name="Banco_de_Registradores_16x32b"/>
     <wire from="(1000,560)" to="(1070,560)"/>
@@ -526,9 +526,9 @@ e2 66 86 6 1 8 20 10
     <wire from="(990,620)" to="(990,670)"/>
     <wire from="(990,700)" to="(1000,700)"/>
   </circuit>
-  <circuit name="ULA">
+  <circuit name="Unidade_Logico_Aritmetica">
     <a name="appearance" val="custom"/>
-    <a name="circuit" val="ULA"/>
+    <a name="circuit" val="Unidade_Logico_Aritmetica"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="clabel" val="ULA"/>
     <a name="clabelup" val="north"/>
